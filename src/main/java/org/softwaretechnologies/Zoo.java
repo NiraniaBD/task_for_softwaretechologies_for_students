@@ -11,7 +11,6 @@ import java.util.List;
 public class Zoo {
     private final List<Animal> animalList = new ArrayList<>();
     public void addAnimal(Animal animal) {
-
         animalList.add(animal);
     }
 
@@ -35,6 +34,8 @@ public class Zoo {
     public List<String> soundAllAnimalsSortByName() {
         List<String> sounds = new ArrayList<>();
         // TODO заполните корректно список звуков
+
+
 
         return sounds;
     }
