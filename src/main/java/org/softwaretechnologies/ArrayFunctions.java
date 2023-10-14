@@ -11,6 +11,21 @@ public final class ArrayFunctions {
      */
     public static void reverse(int[] array) {
         // TODO: реализуйте вышеуказанную функцию
+
+        // https://www.youtube.com/watch?v=7xZXHPF64n8
+        // https://www.youtube.com/watch?v=xeUAsbyDCwo
+
+        for (int i = 0; i < array.length / 2 ; i++) {
+            int a = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = a;
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+
+        }
+
     }
 
     /**
