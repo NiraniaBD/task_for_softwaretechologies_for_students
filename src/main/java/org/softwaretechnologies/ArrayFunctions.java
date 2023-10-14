@@ -16,14 +16,13 @@ public final class ArrayFunctions {
         // https://www.youtube.com/watch?v=xeUAsbyDCwo
 
         for (int i = 0; i < array.length / 2 ; i++) {
-            int a = array[i];
+            int tmp = array[i];
             array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = a;
+            array[array.length - 1 - i] = tmp;
         }
 
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
-
         }
 
     }
@@ -40,5 +39,36 @@ public final class ArrayFunctions {
      */
     public static void rotateMatrix(int[][] matrix) {
         // TODO: реализуйте вышеуказанную функцию
+
+        int flag = 0;
+        for (int j = 0; j < matrix.length; j++) {
+
+            if (matrix.length != matrix[j].length){
+                System.out.println("Not a Square!");
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0){
+            System.out.println("It is a Square");
+        }
+
+
+
+        // https://www.youtube.com/watch?v=_iwjwVJGoHo
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = i + 1; j < matrix.length; j++) {
+                int tmp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = tmp;
+            }
+        }
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.println(matrix[i][j]);
+            }
+        }
     }
 }
