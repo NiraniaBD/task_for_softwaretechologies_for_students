@@ -37,7 +37,7 @@ public final class ArrayFunctions {
     public static void rotateMatrix(int[][] matrix) {
         // TODO: реализуйте вышеуказанную функцию
 
-        int flag = 0;
+       /* int flag = 0;
         for (int j = 0; j < matrix.length; j++) {
 
             if (matrix.length != matrix[j].length){
@@ -50,9 +50,11 @@ public final class ArrayFunctions {
             System.out.println("It is a Square");
         }
 
+        */
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = i + 1; j < matrix.length; j++) {
+
                 int tmp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = tmp;
