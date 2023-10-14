@@ -12,9 +12,6 @@ public final class ArrayFunctions {
     public static void reverse(int[] array) {
         // TODO: реализуйте вышеуказанную функцию
 
-        // https://www.youtube.com/watch?v=7xZXHPF64n8
-        // https://www.youtube.com/watch?v=xeUAsbyDCwo
-
         for (int i = 0; i < array.length / 2 ; i++) {
             int tmp = array[i];
             array[i] = array[array.length - 1 - i];
@@ -53,9 +50,6 @@ public final class ArrayFunctions {
             System.out.println("It is a Square");
         }
 
-
-
-        // https://www.youtube.com/watch?v=_iwjwVJGoHo
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = i + 1; j < matrix.length; j++) {
