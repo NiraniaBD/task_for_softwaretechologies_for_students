@@ -73,31 +73,98 @@ public final class Elevator {
     public void goToExactFloor(int floor) {
        // TODO: реализуйте вышеуказанную функцию
 
-        if (floor > highestFloor && floor < lowestFloor) {
+        //System.out.println(currentFloor);
+        //System.out.println(currentFloor1);
+        //System.out.println(lowestFloor);
+        //System.out.println(highestFloor);
+
+        //int a = currentFloor;
+
+      /*  while (currentFloor < floor) {
+            goUp();
+            System.out.println(currentFloor);
+        }
+
+       */
+
+
+        if (floor > highestFloor || floor < lowestFloor) {
+            System.out.println("Указан неверный этаж");
+            return;
+        }
+
+
             while (currentFloor != floor) {
 
              /*   if (floor > highestFloor) {
                     System.out.println("Указан неверный этаж");
                     break;
+
                 }
+
                 if (floor < lowestFloor) {
                     System.out.println("Указан неверный этаж");
                     break;
                 }
+
               */
+
 
                 System.out.println("Текущий этаж: " + currentFloor);
                 if (currentFloor > floor) {
                     goDown();
-                } else {
+                } else if(currentFloor<floor){
                     goUp();
                 }
+
             }
             System.out.println("Вы достигли указанного этажа: " + currentFloor);
+
+
+        //System.out.println("currentFloor:");
+       // System.out.println(currentFloor);
+
+       // System.out.println("floor:");
+        //System.out.println(floor);
+
+
+
+
+   /*     while (lowestFloor != floor){
+            goUp();
         }
+*/
+
+/*
+      if (currentFloor1 == lowestFloor){
+            while (currentFloor >= floor){
+                goUp();
+            }
+            System.out.println(currentFloor);
+        }
+
+        if (currentFloor == highestFloor){
+            while (currentFloor <= floor){
+                goDown();
+            }
+            System.out.println(currentFloor);
+        }
+
         else {
-            System.out.println("Указан неверный этаж");
-        }
+            if (currentFloor < floor){
+                while (currentFloor <= floor){
+                    goUp();
+                }
+                System.out.println(currentFloor);
+            }
+
+            if (currentFloor > floor){
+                while (currentFloor >= floor){
+                    goDown();
+                }
+                System.out.println(currentFloor);
+            }
+        } */
     }
 
     /**

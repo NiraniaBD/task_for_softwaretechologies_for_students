@@ -11,14 +11,14 @@ public final class ArrayFunctions {
      */
     public static void reverse(int[] array) {
         // TODO: реализуйте вышеуказанную функцию
-
-        for (int i = 0; i < array.length / 2 ; i++) {
+        int t=array.length;
+        for (int i = 0; i < t/ 2 ; i++) {
             int tmp = array[i];
-            array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = tmp;
+            array[i] = array[t - 1 - i];
+            array[t - 1 - i] = tmp;
         }
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < t; i++) {
             System.out.println(array[i]);
         }
 
@@ -37,6 +37,11 @@ public final class ArrayFunctions {
     public static void rotateMatrix(int[][] matrix) {
         // TODO: реализуйте вышеуказанную функцию
 
+        int matr=matrix.length;
+        int m=matrix[0].length;
+        if(matr!=m){
+            System.out.println("Not a Square!");
+        }
        /* int flag = 0;
         for (int j = 0; j < matrix.length; j++) {
 
@@ -61,10 +66,10 @@ public final class ArrayFunctions {
             }
         }
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                System.out.println(matrix[i][j]);
-            }
-        }
+//        for (int i = 0; i < matrix.length; i++) {
+//            for (int j = 0; j < matrix.length; j++) {
+//                System.out.println(matrix[i][j]);
+//            }
+//        }
     }
 }
