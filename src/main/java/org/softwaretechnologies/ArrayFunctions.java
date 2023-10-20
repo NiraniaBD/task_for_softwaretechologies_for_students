@@ -18,9 +18,9 @@ public final class ArrayFunctions {
             array[t - 1 - i] = tmp;
         }
 
-        for (int i = 0; i < t; i++) {
-            System.out.println(array[i]);
-        }
+//        for (int i = 0; i < t; i++) {
+//            System.out.println(array[i]);
+//        }
 
     }
 
