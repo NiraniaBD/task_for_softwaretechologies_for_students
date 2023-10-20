@@ -73,37 +73,18 @@ public final class Elevator {
     public void goToExactFloor(int floor) {
        // TODO: реализуйте вышеуказанную функцию
 
-        //System.out.println(currentFloor);
-        //System.out.println(currentFloor1);
-        //System.out.println(lowestFloor);
-        //System.out.println(highestFloor);
-
-        //int a = currentFloor;
-
-      /*  while (currentFloor < floor) {
-            goUp();
-            System.out.println(currentFloor);
-        }
-
-       */
-
-
         if (floor > highestFloor && floor < lowestFloor) {
             while (currentFloor != floor) {
 
              /*   if (floor > highestFloor) {
                     System.out.println("Указан неверный этаж");
                     break;
-
                 }
-
                 if (floor < lowestFloor) {
                     System.out.println("Указан неверный этаж");
                     break;
                 }
-
               */
-
 
                 System.out.println("Текущий этаж: " + currentFloor);
                 if (currentFloor > floor) {
@@ -116,53 +97,7 @@ public final class Elevator {
         }
         else {
             System.out.println("Указан неверный этаж");
-
         }
-
-        //System.out.println("currentFloor:");
-       // System.out.println(currentFloor);
-
-       // System.out.println("floor:");
-        //System.out.println(floor);
-
-
-
-
-   /*     while (lowestFloor != floor){
-            goUp();
-        }
-*/
-
-/*
-      if (currentFloor1 == lowestFloor){
-            while (currentFloor >= floor){
-                goUp();
-            }
-            System.out.println(currentFloor);
-        }
-
-        if (currentFloor == highestFloor){
-            while (currentFloor <= floor){
-                goDown();
-            }
-            System.out.println(currentFloor);
-        }
-
-        else {
-            if (currentFloor < floor){
-                while (currentFloor <= floor){
-                    goUp();
-                }
-                System.out.println(currentFloor);
-            }
-
-            if (currentFloor > floor){
-                while (currentFloor >= floor){
-                    goDown();
-                }
-                System.out.println(currentFloor);
-            }
-        } */
     }
 
     /**
