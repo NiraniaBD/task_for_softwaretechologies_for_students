@@ -75,7 +75,7 @@ public class Money {
      * Тип_ВАЛЮТЫ: количество.XXXX
      * Тип_валюты: USD, EURO, RUB или KRONA
      * количество.XXXX - округленный amount до 4х знаков.
-     * Округление по правилу: если >= 5, то в большую сторону, интаче - в меньшую
+     * Округление по правилу: если >= 5, то в большую сторону, иначе - в меньшую
      * BigDecimal scale = amount.setScale(4, RoundingMode.HALF_UP);
      * <p>
      * Если тип валюты null, то вернуть:
@@ -101,7 +101,7 @@ public class Money {
             return type.toString()+"null";
         }
         else {
-            return type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
+            return type.toString()+"."+amount.setScale(4, RoundingMode.HALF_UP).toString();
         }
     }
 
