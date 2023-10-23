@@ -32,14 +32,14 @@ public class Zoo {
         List<String> sounds = new ArrayList<>();
         // TODO заполните корректно список звуков
 
-        Comparator <Animal> animaalComparator = new Comparator<Animal>() {
+        Comparator <Animal> animalComparator = new Comparator<Animal>() {
             @Override
             public int compare(Animal animal, Animal t1) {
                 return animal.getName().compareTo(t1.getName());
             }
         };
 
-        Collections.sort(animalList, animaalComparator);
+        Collections.sort(animalList, animalComparator);
         for (Animal a:animalList){
             sounds.add(a.sound());
         }

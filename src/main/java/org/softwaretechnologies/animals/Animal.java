@@ -34,7 +34,7 @@ public abstract class Animal {
         }
     }
 
-    private static class Dog{
+    private static class Dog {
         public String getSound(){
             return "woof";
         }
