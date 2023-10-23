@@ -18,17 +18,6 @@ public class Money {
         this.amount = amount;
     }
 
-
-    //дописано вручную
-    private int getMoneyValue(MoneyType type){
-        switch (type){
-            case USD: return 1;
-            case EURO: return 2;
-            case RUB: return 3;
-            default: return 0;
-        }
-    }
-
     /**
      * Money равны, если одинаковый тип валют и одинаковое число денег до 4 знака после запятой.
      * Округление по правилу: если >= 5, то в большую сторону, иначе - в меньшую
@@ -68,6 +57,18 @@ public class Money {
      *
      * @return хеш код по указанной формуле
      */
+
+
+    //дописано вручную
+    private int getMoneyValue(MoneyType type){
+        switch (type){
+            case USD: return 1;
+            case EURO: return 2;
+            case RUB: return 3;
+            default: return 0;
+        }
+    }
+
     @Override
     public int hashCode() {
         // TODO: реализуйте вышеуказанную функцию
