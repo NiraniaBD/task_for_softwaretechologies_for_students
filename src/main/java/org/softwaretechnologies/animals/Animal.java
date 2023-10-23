@@ -22,20 +22,36 @@ public abstract class Animal {
      * @return Метод должен возвращать строку, соответсвующую издаваемого животным звука.
      */
 
-    private static class Cat {
-        public String getSound(){
+    public static class Cat extends Animal {
+
+        public Cat(String name) {
+            super(name);
+        }
+
+        @Override
+        public String sound() {
             return "meow";
         }
     }
 
-    private static class Cow {
-        public String getSound(){
+    public static class Cow extends Animal{
+        public Cow(String name) {
+            super(name);
+        }
+
+        @Override
+        public String sound() {
             return "moo";
         }
     }
 
-    private static class Dog {
-        public String getSound(){
+    public static class Dog extends Animal {
+        public Dog(String name) {
+            super(name);
+        }
+
+        @Override
+        public String sound() {
             return "woof";
         }
     }
