@@ -22,28 +22,22 @@ public abstract class Animal {
      * @return Метод должен возвращать строку, соответсвующую издаваемого животным звука.
      */
 
-   /* private static class Tester extends Employee {
-        protected Tester(String name, int baseSalary) {
-            super(name, baseSalary);
-        }
-
-        @Override
-        public int getMonthSalary(int month) {
-            return baseSalary * YearMonth.of(LocalDate.now().getYear(), month).lengthOfMonth();
-        }
-    } */
-
-
     private static class Cat {
-
+        public String getSound(){
+            return "meow";
+        }
     }
 
-    private static class Cow{
-
+    private static class Cow {
+        public String getSound(){
+            return "moo";
+        }
     }
 
     private static class Dog{
-
+        public String getSound(){
+            return "woof";
+        }
     }
 
     public abstract String sound();
