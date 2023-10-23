@@ -42,8 +42,15 @@ public class Money {
     public boolean equals(Object o) {
         // TODO: реализуйте вышеуказанную функцию
 
+        if (type == o && amount == o){
+            return true;
+        }
+        else{
+            return false;
+        }
 
-        return false;
+
+
     }
 
     /**
