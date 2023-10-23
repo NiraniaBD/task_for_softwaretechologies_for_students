@@ -17,9 +17,9 @@ public class AnimalFactory {
         /* TODO в зависимости от type создайте и верните нужное животное */
 
         /* return switch (type){
-            case Manager -> new Manager(name, baseSalary);
-            case Programmer -> new Programmer(name, baseSalary);
-            case Tester -> new Tester(name, baseSalary);
+            case Cat -> new Cat(name, baseSalary);
+            case Cow -> new Cow(name, baseSalary);
+            case Dog -> new Dog(name, baseSalary);
         }; */
 
 
