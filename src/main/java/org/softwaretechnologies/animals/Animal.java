@@ -18,5 +18,8 @@ public abstract class Animal {
      * Собака должна издавать звук: "woof"
      * @return Метод должен возвращать строку, соответсвующую издаваемого животным звука.
      */
+
+
+
     public abstract String sound();
 }
