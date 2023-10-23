@@ -25,7 +25,6 @@ public class EmployeeFactory {
         public int getMonthSalary(int month) {
             if (month %2 == 0){
                 return baseSalary;
-
             }
             return baseSalary/2;
         }
