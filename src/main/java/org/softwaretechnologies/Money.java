@@ -1,5 +1,8 @@
 package org.softwaretechnologies;
 
+import com.sun.jdi.Value;
+
+import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
@@ -15,9 +18,20 @@ public class Money {
         this.amount = amount;
     }
 
+
+    //дописано вручную
+    private int getMoneyValue(MoneyType type){
+        switch (type){
+            case USD: return 1;
+            case EURO: return 2;
+            case RUB: return 3;
+            default: return 0;
+        }
+    }
+
     /**
      * Money равны, если одинаковый тип валют и одинаковое число денег до 4 знака после запятой.
-     * Округление по правилу: если >= 5, то в большую сторону, интаче - в меньшую
+     * Округление по правилу: если >= 5, то в большую сторону, иначе - в меньшую
      * Пример округления:
      * BigDecimal scale = amount.setScale(4, RoundingMode.HALF_UP);
      *
@@ -28,12 +42,13 @@ public class Money {
     public boolean equals(Object o) {
         // TODO: реализуйте вышеуказанную функцию
 
+
         return false;
     }
 
     /**
      * Формула:
-     * (Если amount null 10000, иначе количество денег окрукленные до 4х знаков * 10000) + :
+     * (Если amount null 10000, иначе количество денег округленные до 4х знаков * 10000) + :
      * если USD , то 1
      * если EURO, то 2
      * если RUB, то 3
@@ -75,8 +90,19 @@ public class Money {
     @Override
     public String toString() {
         // TODO: реализуйте вышеуказанную функцию
-        String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
-        return str;
+
+        if (amount == null && type == null){
+            return "null: XXXX";
+        }
+        else if ( type == null){
+            return "null: " +amount.setScale(4, RoundingMode.HALF_UP).toString();
+        }
+        else if (amount == null){
+            return type.toString()+"null";
+        }
+        else {
+            return type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
+        }
     }
 
     public BigDecimal getAmount() {

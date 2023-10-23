@@ -110,5 +110,7 @@ public class EqualsHashCodeTest {
         assertFalse(e);
         // ↑↑↑↑ КОД ДЛЯ ЗАМЕНЫ ↑↑↑↑
 
+        //заменить true на false, false на true, где надо, чтобы тест заработал
+
     }
 }
