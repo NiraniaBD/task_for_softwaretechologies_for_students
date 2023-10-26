@@ -15,7 +15,7 @@ public class ExceptionTask {
         try {
             throwRuntimeException();
         }catch (Exception s ){
-            System.out.println("Вызвать функцию printMessage");
+            System.out.println("Вызвана функция printMessage");
         }
     }
 
@@ -31,7 +31,7 @@ public class ExceptionTask {
         try {
             throwRuntimeException();
         }catch (Exception s ) {
-            System.out.println("Вызвать функцию printMessage2");
+            System.out.println("Вызвана функция printMessage2");
         }
 
     }
