@@ -109,7 +109,7 @@ public class Money {
 
     // Random random = new Random();
         // return random.nextInt();
-    }
+
 
     /**
      * Верните строку в формате
