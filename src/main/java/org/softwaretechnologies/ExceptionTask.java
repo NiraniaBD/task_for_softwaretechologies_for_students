@@ -54,7 +54,7 @@ public class ExceptionTask {
     public static int divide(int dividend, int divisor) throws DivideOnNullException {
         // TODO: реализуйте вышеуказанную функцию
 
-        if (divisor==0){
+        if (divisor == 0){
             throw new DivideOnNullException();
         }
 
@@ -74,11 +74,11 @@ public class ExceptionTask {
     public static Optional<String> mergeStrings(String first, String second) {
         // TODO: реализуйте вышеуказанную функцию
 
-        if (first==null&&second==null) {
+        if (first==null&&second == null) {
             return Optional.empty();
-        } else if (first==null){
+        } else if (first == null){
             return Optional.of(second);
-        } else if (second==null){return  Optional.of(first);}
+        } else if (second == null){return Optional.of(first);}
 
         return Optional.of(first.length() > second.length() ? first + second : second + first);
     }
