@@ -1,8 +1,5 @@
 package org.softwaretechnologies;
 
-import com.sun.jdi.Value;
-
-import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
@@ -34,10 +31,10 @@ public class Money {
         if (o == this){
             return true;
         }
+
         if (!(o instanceof Money money)) {
             return false;
         }
-
 
         if (((Money) o).amount == null || amount == null ) {
             if (((Money) o).amount == null && amount == null) {
@@ -54,7 +51,6 @@ public class Money {
             else {
                 return false;
             }
-
         }
         return type == ((Money) o).type && amount.setScale(4, RoundingMode.HALF_UP).compareTo(((Money) o).amount.setScale(4, RoundingMode.HALF_UP)) == 0;
 
@@ -77,20 +73,19 @@ public class Money {
      */
 
 
-    //дописано вручную
-    private int getMoneyValue(MoneyType type){
-        switch (type){
-            case USD: return 1;
-            case EURO: return 2;
-            case RUB: return 3;
-            default: return 0;
-        }
-    }
+
+//    private int getMoneyValue(MoneyType type){
+//        switch (type){
+//            case USD: return 1;
+//            case EURO: return 2;
+//            case RUB: return 3;
+//            default: return 0;
+//        }
+//    }
 
     @Override
     public int hashCode() {
         // TODO: реализуйте вышеуказанную функцию
-
 
         if(amount==null) {
             return 10000;
@@ -150,8 +145,8 @@ public class Money {
 //            return type.toString()+"."+amount.setScale(4, RoundingMode.HALF_UP).toString();
 //        }
 
-        return type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
-
+        String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
+        return str;
     }
 
     public BigDecimal getAmount() {
