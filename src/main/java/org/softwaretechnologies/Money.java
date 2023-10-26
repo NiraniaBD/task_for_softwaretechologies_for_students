@@ -31,14 +31,32 @@ public class Money {
     public boolean equals(Object o) {
         // TODO: реализуйте вышеуказанную функцию
 
-        if (type == o && amount == o){
+        if (o == this){
             return true;
         }
-        else{
+        if (!(o instanceof Money money)) {
             return false;
         }
 
 
+        if (((Money) o).amount == null || amount == null ) {
+            if (((Money) o).amount == null && amount == null) {
+                return type == ((Money) o).type;
+            } else {
+                return false;
+            }
+        }
+
+        if (((Money) o).type == null || type == null) {
+            if (((Money) o).type == null && type == null) {
+                return amount.setScale(4, RoundingMode.HALF_UP).compareTo(((Money) o).amount.setScale(4, RoundingMode.HALF_UP)) == 0;
+            }
+            else {
+                return false;
+            }
+
+        }
+        return type == ((Money) o).type && amount.setScale(4, RoundingMode.HALF_UP).compareTo(((Money) o).amount.setScale(4, RoundingMode.HALF_UP)) == 0;
 
     }
 
@@ -74,8 +92,28 @@ public class Money {
         // TODO: реализуйте вышеуказанную функцию
 
 
-        Random random = new Random();
-        return random.nextInt();
+        if(amount==null) {
+            return 10000;
+        }
+
+        int ra;
+        ra=amount.setScale(4, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(10000)).intValue();
+        if(ra>MAX_VALUE-5) {
+            ra = MAX_VALUE;
+        }
+
+        if (type==null){
+            ra+=5;
+            return ra;
+        }
+
+        ra+=type.ordinal()+1;
+        return ra;
+    }
+
+
+    // Random random = new Random();
+        // return random.nextInt();
     }
 
     /**
@@ -99,18 +137,21 @@ public class Money {
     public String toString() {
         // TODO: реализуйте вышеуказанную функцию
 
-        if (amount == null && type == null){
-            return "null: XXXX";
-        }
-        else if ( type == null){
-            return "null: " +amount.setScale(4, RoundingMode.HALF_UP).toString();
-        }
-        else if (amount == null){
-            return type.toString()+"null";
-        }
-        else {
-            return type.toString()+"."+amount.setScale(4, RoundingMode.HALF_UP).toString();
-        }
+//        if (amount == null && type == null){
+//            return "null: XXXX";
+//        }
+//        else if ( type == null){
+//            return "null: " +amount.setScale(4, RoundingMode.HALF_UP).toString();
+//        }
+//        else if (amount == null){
+//            return type.toString()+"null";
+//        }
+//        else {
+//            return type.toString()+"."+amount.setScale(4, RoundingMode.HALF_UP).toString();
+//        }
+
+        return type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
+
     }
 
     public BigDecimal getAmount() {
