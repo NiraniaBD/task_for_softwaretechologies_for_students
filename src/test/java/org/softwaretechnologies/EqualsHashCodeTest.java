@@ -105,7 +105,7 @@ public class EqualsHashCodeTest {
         // ↓↓↓↓ КОД ДЛЯ ЗАМЕНЫ ↓↓↓↓
         assertTrue(a);
         assertFalse(b);
-        assertTrue(c);
+        assertFalse(c);
         assertFalse(d);
         assertTrue(e);
         // ↑↑↑↑ КОД ДЛЯ ЗАМЕНЫ ↑↑↑↑
