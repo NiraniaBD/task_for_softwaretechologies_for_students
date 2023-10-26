@@ -17,8 +17,6 @@ public class ExceptionTask {
         }catch (Exception s){
             System.out.println("Вызвана функция printMessage");
         }
-
-
     }
 
     /**
