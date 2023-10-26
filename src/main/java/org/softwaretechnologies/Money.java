@@ -87,23 +87,23 @@ public class Money {
     public int hashCode() {
         // TODO: реализуйте вышеуказанную функцию
 
-        if(amount==null) {
+        if(amount == null) {
             return 10000;
         }
 
-        int ra;
-        ra=amount.setScale(4, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(10000)).intValue();
-        if(ra>MAX_VALUE-5) {
-            ra = MAX_VALUE;
+        int a;
+        a = amount.setScale(4, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(10000)).intValue();
+        if(a > MAX_VALUE -5) {
+            a = MAX_VALUE;
         }
 
-        if (type==null){
-            ra+=5;
-            return ra;
+        if (type == null){
+            a += 5;
+            return a;
         }
 
-        ra+=type.ordinal()+1;
-        return ra;
+        a += type.ordinal()+1;
+        return a;
     }
 
 
