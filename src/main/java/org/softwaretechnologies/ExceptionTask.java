@@ -9,7 +9,6 @@ public class ExceptionTask {
        Вызвана функция printMessage
      */
     public static void printMessage() {
-        //throwRuntimeException();
         // TODO: реализуйте вышеуказанную функцию
 
         try {
@@ -25,7 +24,6 @@ public class ExceptionTask {
      Вызвана функция printMessage2
      */
     public static void printMessage2() throws Exception {
-        //throwCatchableException();
         // TODO: реализуйте вышеуказанную функцию
 
         try {
