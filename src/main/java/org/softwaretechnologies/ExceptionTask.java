@@ -74,7 +74,7 @@ public class ExceptionTask {
     public static Optional<String> mergeStrings(String first, String second) {
         // TODO: реализуйте вышеуказанную функцию
 
-        if (first==null&&second == null) {
+        if (first == null && second == null) {
             return Optional.empty();
         } else if (first == null){
             return Optional.of(second);
