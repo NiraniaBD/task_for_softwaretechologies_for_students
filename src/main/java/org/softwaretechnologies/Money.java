@@ -49,10 +49,7 @@ public class Money {
             }
         }
 
-        //сравнивается type и amount
-        //если да, то сравнивает значения свойств amount обоих объектов с округлением до 4 знаков после запятой
-        //если нет, то проверяет равенство свойств "type" и "amount" обоих объектов с округлением до 4 знаков после запятой
-        //если да, то объекты равны
+
         if (((Money) o).type == null || type == null) {
             if (((Money) o).type == null && type == null) {
                 return amount.setScale(4, RoundingMode.HALF_UP).compareTo(((Money) o).amount.setScale(4, RoundingMode.HALF_UP)) == 0;
@@ -99,8 +96,7 @@ public class Money {
             return 10000;
         }
 
-        //создается числовое представление amount
-        //с округлением до 4 знаков после запятой, умноженное на 10000 и приведенное к типу int
+
         int a;
         a = amount.setScale(4, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(10000)).intValue();
         if(a > MAX_VALUE -5) {
@@ -112,9 +108,7 @@ public class Money {
             a += 5;
             return a;
         }
-        //иначе: если свойство type не равно null
-        //то к переменной a добавляется значение порядкового номера (ordinal) свойства type + 1
-        //это добавляет уникальность к хеш-коду в зависимости от значения свойства type
+
         a += type.ordinal()+1;
         return a;
     }
@@ -154,11 +148,6 @@ public class Money {
 //        }
 
 
-        //к строке str добавляется строковое представление свойства "amount"
-        // свойство amount округляется до 4 знаков после запятой
-        // с помощью метода setScale(4, RoundingMode.HALF_UP)
-        // а затем преобразуется в строку с помощью метода toString()
-        //Возвращается строка str
         String str = type.toString()+": "+amount.setScale(4, RoundingMode.HALF_UP).toString();
         return str;
     }
